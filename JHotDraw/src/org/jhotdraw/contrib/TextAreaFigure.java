@@ -737,7 +737,6 @@ public class TextAreaFigure extends AttributeFigure
 	}
 	
 	
-	// TODO: Make the method private
 	/**
 	 * Reads the figure from an object stream
 	 *
@@ -745,7 +744,7 @@ public class TextAreaFigure extends AttributeFigure
 	 * @throws ClassNotFoundException  thrown by called methods
 	 * @throws IOException             thrown by called methods
 	 */
-	protected void readObject(ObjectInputStream s)
+	private void readObject(ObjectInputStream s)
 		throws ClassNotFoundException, IOException {
 
 		s.defaultReadObject();
