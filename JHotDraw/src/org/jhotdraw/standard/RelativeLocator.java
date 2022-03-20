@@ -38,7 +38,7 @@ public class RelativeLocator extends AbstractLocator {
 		fRelativeX = 0.0;
 		fRelativeY = 0.0;
 	}
-
+	//TODO: add in hashcode ovveride as well
 	public boolean equals(Object o) {
 		if (RelativeLocator.class.isInstance(o)) {
 			RelativeLocator rl = (RelativeLocator) o;
