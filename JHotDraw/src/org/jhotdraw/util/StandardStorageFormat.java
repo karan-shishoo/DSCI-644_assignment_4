@@ -202,7 +202,7 @@ public class StandardStorageFormat implements StorageFormat {
 			return (Drawing)input.readStorable();
 		}
 	}
-	//TODO: add in hashcode ovveride as well
+	
 	/**
 	 * Test, whether two StorageFormats are the same. They are the same if they both support the
 	 * same file extension.
@@ -217,6 +217,12 @@ public class StandardStorageFormat implements StorageFormat {
 			return false;
 		}
 	}
+	
+    public int hashCode() {
+    	int hash = 7;
+    	hash = 31 * hash + getFileExtension().hashCode();
+        return hash;
+    }
 
 	/**
 	 * Adjust a file name to have the correct file extension.
