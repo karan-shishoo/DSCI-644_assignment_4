@@ -414,9 +414,9 @@ public class DrawApplet
 			fSelectedToolButton.select();
 		}
 	}
-	// FIXME: change the == to a .equals()
+	
 	protected void loadDrawing(String param) {
-		if (param == fgUntitled) {
+		if (fgUntitled.equals(param)) {
 			fDrawing.release();
 			initDrawing();
 			return;
