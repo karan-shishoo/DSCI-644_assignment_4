@@ -202,7 +202,7 @@ public class StandardStorageFormat implements StorageFormat {
 			return (Drawing)input.readStorable();
 		}
 	}
-
+	//TODO: add in hashcode ovveride as well
 	/**
 	 * Test, whether two StorageFormats are the same. They are the same if they both support the
 	 * same file extension.
