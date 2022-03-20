@@ -336,7 +336,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	public void drawBackground(Graphics g) {
 		((Graphics2D)g).fill(getClippingShape());
 	}
-	// TODO: move the drawframe into the null check
+	
 	/**
 	 * Formats and draws the text for the figure
 	 *
@@ -382,10 +382,11 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 		}
 		if (g != null) {
 			g2.setClip(savedClip);
+			drawFrame(g);
 		}
 
 		// redraw the border to prevent smearing
-		drawFrame(g);
+		
 		return displayBox.height;
 	}
 
