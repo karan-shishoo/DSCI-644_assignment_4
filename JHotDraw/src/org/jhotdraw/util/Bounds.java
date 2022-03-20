@@ -455,7 +455,7 @@ public class Bounds implements Serializable {
 
 		return resultLine;
 	}
-
+	//TODO: change math to floating point math equality
 	public boolean equals(Object anObject) {
 		if ((anObject == null) || (!(anObject instanceof Bounds))) {
 			return false;
