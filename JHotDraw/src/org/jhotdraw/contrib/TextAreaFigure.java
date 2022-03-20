@@ -735,7 +735,9 @@ public class TextAreaFigure extends AttributeFigure
 
 		setFont(createFont());
 	}
-
+	
+	
+	// TODO: Make the method private
 	/**
 	 * Reads the figure from an object stream
 	 *
