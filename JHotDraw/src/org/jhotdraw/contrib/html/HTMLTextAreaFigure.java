@@ -336,7 +336,7 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 	public void drawBackground(Graphics g) {
 		((Graphics2D)g).fill(getClippingShape());
 	}
-
+	// TODO: move the drawframe into the null check
 	/**
 	 * Formats and draws the text for the figure
 	 *
