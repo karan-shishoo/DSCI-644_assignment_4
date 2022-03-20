@@ -198,10 +198,10 @@ public  class JavaDrawApp extends MDI_DrawApplication {
 		menu.add(new WindowMenu("Window List", (MDIDesktopPane)getDesktop(), this));
 		return menu;
 	}
-
+	
 	protected JMenu createImagesMenu() {
 		CommandMenu menu = new CommandMenu("Images");
-		URL url = getClass().getResource(fgSampleImagesPath);
+		final URL url = getClass().getResource(fgSampleImagesPath);
 		if (url == null) {
 			throw new JHotDrawRuntimeException("Could not locate images: " + fgSampleImagesPath);
 		}
