@@ -455,17 +455,18 @@ public class Bounds implements Serializable {
 
 		return resultLine;
 	}
-	//TODO: change math to floating point math equality
+	
+	
 	public boolean equals(Object anObject) {
 		if ((anObject == null) || (!(anObject instanceof Bounds))) {
 			return false;
 		}
 		Bounds aBounds = (Bounds) anObject;
-
-		if ((_dX1 == aBounds.getLesserX()) &&
-				(_dX2 == aBounds.getGreaterX()) &&
-				(_dY1 == aBounds.getLesserY()) &&
-				(_dY2 == aBounds.getGreaterY())) {
+		double epsilon = 0.0000001;
+		if ((Math.abs(_dX1 - aBounds.getLesserX()) < epsilon) &&
+				(Math.abs(_dX2 - aBounds.getGreaterX()) < epsilon) &&
+				(Math.abs(_dY1 - aBounds.getLesserY()) < epsilon) &&
+				(Math.abs(_dY2 - aBounds.getGreaterY()) < epsilon)) {
 			return true;
 		}
 
