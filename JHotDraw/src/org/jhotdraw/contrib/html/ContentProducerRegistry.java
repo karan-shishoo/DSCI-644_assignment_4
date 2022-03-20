@@ -39,8 +39,14 @@ import org.jhotdraw.util.StorableOutput;
  * @created 7 mai 2002
  * @version <$CURRENT_VERSION$>
  */
-//TODO: add serialVersionUID
 public class ContentProducerRegistry implements Serializable, Storable {
+	
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 420939832311024084L;
 
 	/** producers registered with this registry */
 	private Hashtable fContentProducers = new Hashtable();
