@@ -31,7 +31,7 @@ public  class ConnectedTextTool extends TextTool {
 	public ConnectedTextTool(DrawingEditor editor, Figure prototype) {
 		super(editor, prototype);
 	}
-	//TODO: remove null check as value already derefferenced
+
 	/**
 	 * If the pressed figure is a TextHolder it can be edited otherwise
 	 * a new text figure is created.
@@ -42,7 +42,7 @@ public  class ConnectedTextTool extends TextTool {
 		if (getTypingTarget() != null) {
 			TextHolder textHolder = getTypingTarget();
 			setConnectedFigure(drawing().findFigureInsideWithout(x, y, textHolder.getRepresentingFigure()));
-			if ((getConnectedFigure() != null) && (textHolder != null) && (getConnectedFigure().getTextHolder() != textHolder)) {
+			if ((getConnectedFigure() != null) && (getConnectedFigure().getTextHolder() != textHolder)) {
 				textHolder.connect(getConnectedFigure().getDecoratedFigure());
 				getConnectedFigure().addDependendFigure(getAddedFigure());
 			}
