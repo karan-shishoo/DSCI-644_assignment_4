@@ -309,9 +309,8 @@ public class JDOStorageFormat extends StandardStorageFormat {
 			setSize(200, 200);
 		}
 	}
-// TODO: remove frame dead store
+	
 	public static void main(String[] args) {
-		DrawingSelector frame = new DrawingSelector();
 		try {
 			Drawing newDrawing = new StandardDrawing();
 			newDrawing.setTitle("TestDrawingName" + new Random(System.currentTimeMillis()).nextLong());
