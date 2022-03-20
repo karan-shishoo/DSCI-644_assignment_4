@@ -414,7 +414,7 @@ public class DrawApplet
 			fSelectedToolButton.select();
 		}
 	}
-	
+		
 	protected void loadDrawing(String param) {
 		if (fgUntitled.equals(param)) {
 			fDrawing.release();
